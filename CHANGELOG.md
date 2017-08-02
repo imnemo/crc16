@@ -2,7 +2,7 @@
 
 _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement._
 
-## v1.0.0-alpha.1  ( Wed Aug 02 2017 23:53:45 GMT+0800 (CST) )
+## v1.0.0-alpha.1  ( Thu Aug 03 2017 00:16:01 GMT+0800 (CST) )
 
 
 ## Features
@@ -17,6 +17,7 @@ _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agre
 
 
 ## Chore
+  - chore:Add .npmignore (61e8968e40e9fa460e16ae8f502e5bc92facbc77
   - chore:Add changelog (fc0965155ae4724e5fc43cd595798a401a43b2f8
   - chore:Add core algorithm c++ implementation (d5042c7470cff63567525e4c108d20cf044bb21a
 
