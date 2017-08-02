@@ -1,4 +1,4 @@
-<% if(logo) { %><img width="300px" src="<%= logo %>" /><%= '\n\n' %><% } %># <%= title %>
+<% if(logo) { %><img width="300px" src="<%= logo %>" /><%= '\n\n' %><% } %># <%= title %> - Changelog
 <% if(intro) { %><%= '\n' %>_<%= intro %>_<%= '\n' %><% } %>
 <% if(version) { %>## <%= version.name %> <%= version.number %> ( <%= version.date %> )<%= '\n' %><% } %>
 <% _.forEach(sections, function(section){

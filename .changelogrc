@@ -4,7 +4,7 @@
     "branch" : "master",
     "repo_url": "https://github.com/imnemo/crc16",
     "version_name" : "v1.0.0-alpha",
-    "file": "CHANGELOG",
+    "file": "CHANGELOG.md",
     "template": "doc/git-changelog-tpl.md",
     "sections": [
         {
