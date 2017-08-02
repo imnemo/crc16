@@ -1,6 +1,6 @@
 {
   "name": "node-crc16",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.1",
   "description": "A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement.",
   "main": "index.js",
   "scripts": {

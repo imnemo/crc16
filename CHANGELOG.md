@@ -2,7 +2,7 @@
 
 _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement._
 
-## v1.0.0-alpha  ( Wed Aug 02 2017 23:50:46 GMT+0800 (CST) )
+## v1.0.0-alpha.1  ( Wed Aug 02 2017 23:53:45 GMT+0800 (CST) )
 
 
 ## Features

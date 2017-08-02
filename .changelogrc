@@ -3,7 +3,7 @@
     "intro": "A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement.",
     "branch" : "master",
     "repo_url": "https://github.com/imnemo/crc16",
-    "version_name" : "v1.0.0-alpha",
+    "version_name" : "v1.0.0-alpha.1",
     "file": "CHANGELOG.md",
     "template": "doc/git-changelog-tpl.md",
     "sections": [
