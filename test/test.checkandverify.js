@@ -21,7 +21,7 @@ function generateRandomHex(option){
 
 describe('Check sum and verify it', function() {
   describe('When input stream is a random string', function() {
-    for(var i = 0; i < 50; i++){
+    for(var i = 0; i < 10000; i++){
       var randomStr = generateRandomStr({maxLen: 100});
       var randomBuf = (new Buffer(randomStr)).toString('hex');
       var sum = crc16.checkSum(randomBuf);
@@ -37,7 +37,7 @@ describe('Check sum and verify it', function() {
   });
 
   describe('When input stram is a random hex', function(){
-    for(var i = 0; i < 50; i++){
+    for(var i = 0; i < 10000; i++){
       var randomStr = generateRandomHex({maxLen: 100});
       var sum = crc16.checkSum(randomStr);
       (function(randomStr, sum){
