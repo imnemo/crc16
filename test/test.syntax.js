@@ -1,5 +1,6 @@
 var should = require('chai').should();
 var crc16 = require('../index');
+var util = require('./../util/util');
 
 var stream = '3a16070a00000000001a0000';
 var sumShouldStr = '98af';
@@ -20,7 +21,7 @@ describe('Syntax to call the apis', function(){
       sum.should.eql(sumShouldArry);
     })
     it('Stream input can be a buffer', function(){
-      var sum = crc16.checkSum(Buffer.from(stream, 'hex'));
+      var sum = crc16.checkSum(util.bufferFactory(stream, 'hex'));
       sum.should.equal(sumShouldStr);
     })
   })
@@ -35,7 +36,7 @@ describe('Syntax to call the apis', function(){
       isValid.should.equal(true);
     })
     it('Stream input can be a buffer', function(){
-      var isValid = crc16.verifySum(Buffer.from(stream + sumShouldStr, 'hex'));
+      var isValid = crc16.verifySum(util.bufferFactory(stream + sumShouldStr, 'hex'));
       isValid.should.equal(true);
     })
   })

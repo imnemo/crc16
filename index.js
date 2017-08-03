@@ -1,5 +1,6 @@
 var debug = require('debug')('node-crc16');
 var crc16Native = require('./build/Release/crc16.node');
+var util = require('./util/util');
 
 var parseParam = function (input, encoding, option) {
   encoding = encoding || 'hex';
@@ -13,15 +14,7 @@ var parseParam = function (input, encoding, option) {
   var buf = (function () {
     if (typeof input === 'string') {
       try {
-        /*
-         * Buffer.from is added in v5.10.0, as the api document shows. But some node version,
-         * v4.2.6 for example, Buffer.from is function, however, there is an error when you call
-         * `Buffer.from(string, encoding)`(error some like `hex is not function`).
-        * */
-        if (typeof Buffer.from === 'function' && process.version >= "v5.10.0") {
-          return Buffer.from(input, encoding);
-        }
-        return new Buffer(input, encoding);
+        return util.bufferFactory(input, encoding);
       } catch (e) {
         console.trace(e);
         debug(e);
