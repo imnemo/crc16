@@ -16,6 +16,10 @@
             "grep": "^feat"
         },
         {
+            "title": "Release",
+            "grep": "^release"
+        },
+        {
             "title": "Documentation",
             "grep": "^docs"
         },

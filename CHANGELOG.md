@@ -2,7 +2,13 @@
 
 _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement._
 
-## v1.0.0-alpha.1 false ( Thu Aug 03 2017 15:07:57 GMT+0800 (CST) )
+
+
+## Bug Fixes
+  - fix:Buffer factory bug when node version is less than v5.10.0
+  ([6fc831e1](https://github.com/imnemo/crc16/commit/6fc831e1841ee8045085853cc8c3c07f1a20d9e0))
+
+
 
 
 ## Features
@@ -12,7 +18,16 @@ _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agre
 
 
 
+## Release
+  - release:v1.0.0-beta
+  ([f2931f20](https://github.com/imnemo/crc16/commit/f2931f2091d224de117437786a8559cbee4ea3d6))
+
+
+
+
 ## Test
+  - test:increase the test case to 10000
+  ([3f49576d](https://github.com/imnemo/crc16/commit/3f49576d777f56792671f8dea811762957bd9f1c))
   - test:Add unit test
   ([5ea90c4d](https://github.com/imnemo/crc16/commit/5ea90c4d1677408561a5a661f4fcf9584ebc395f))
   - test:Add c++ code test and makefile
@@ -22,6 +37,8 @@ _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agre
 
 
 ## Chore
+  - chore:update .changelogrc to make a whole versions changelog
+  ([21b16ae0](https://github.com/imnemo/crc16/commit/21b16ae0fafe3d5a8371c581d5ee1d7692b8818e))
   - chore:Add .npmignore
   ([61e8968e](https://github.com/imnemo/crc16/commit/61e8968e40e9fa460e16ae8f502e5bc92facbc77))
   - chore:Add changelog
