@@ -1,4 +1,4 @@
-all: clean build-test build-node-module
+all: clean build-node
 
 build-node:
 	node-gyp rebuild
@@ -10,11 +10,15 @@ test-node:
 	npm test
 
 test-cpp:
-	clang++ -Wc++11-extensions -std=c++11 -o ./test/crc16_test.out ./test/crc16_test.cc
-	./test/crc16_test.out
+	clang++ -Wc++11-extensions -std=c++11 -o ./test_cpp/crc16_test.out ./test_cpp/crc16_test.cc
+	./test_cpp/crc16_test.out
+
+test: test-cpp
 
 .PHONY: clean
 clean:
 	rm -fr build
 	rm -fr **/*.dSYM
 	rm -f **/*.out
+	rm -fr .nyc_output
+	rm -fr coverage
