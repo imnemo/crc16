@@ -11,7 +11,9 @@
     "test:node": "npm test",
     "clean": "rm -fr build & rm -fr **/*.dSYM & rm -f **/*.out"
   },
-  "engines": {},
+  "engines": {
+    "node": ">=4.2.6"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imnemo/crc16.git"
