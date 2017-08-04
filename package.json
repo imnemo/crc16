@@ -28,9 +28,7 @@
     "url": "https://github.com/imnemo/crc16/issues"
   },
   "homepage": "https://github.com/imnemo/crc16#readme",
-  "dependencies": {
-    "debug": "2.6.8"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "4.1.0",
     "chance": "1.0.10",

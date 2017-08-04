@@ -1,4 +1,4 @@
-var debug = require('debug')('node-crc16');
+// var debug = require('debug')('node-crc16');
 var crc16Native = require('./build/Release/crc16.node');
 var util = require('./util/util');
 
@@ -9,7 +9,6 @@ var parseParam = function (input, encoding, option) {
     encoding = 'hex';
   }
   option = option || {};
-  // console.log(arguments);
 
   var buf = (function () {
     if (typeof input === 'string') {
@@ -17,7 +16,7 @@ var parseParam = function (input, encoding, option) {
         return util.bufferFactory(input, encoding);
       } catch (e) {
         console.trace(e);
-        debug(e);
+        // debug(e);
         return null;
       }
     }

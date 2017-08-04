@@ -1,5 +1,4 @@
 var should = require('chai').should();
-var debug = require('debug')('test-crc16');
 var chance = require('chance').Chance();
 var crc16 = require('../index');
 
