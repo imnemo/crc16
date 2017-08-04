@@ -4,7 +4,7 @@
   "description": "A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --reporter spec",
     "build:node": "npm run clean && node-gyp rebuild",
     "build:xcode-project": "node-gyp configure -- -f xcode",
     "test:cc": "clang++ -Wc++11-extensions -std=c++11 -o ./test/crc16_test.out ./test/crc16_test.cc && ./test/crc16_test.out",
@@ -34,6 +34,7 @@
   "devDependencies": {
     "chai": "4.1.0",
     "chance": "1.0.10",
-    "mocha": "3.4.2"
+    "mocha": "3.4.2",
+    "nyc": "11.1.0"
   }
 }
