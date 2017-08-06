@@ -1,6 +1,6 @@
 {
     "app_name": "node-crc16",
-    "intro": "A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement.",
+    "intro": "A native node addon to calcalate CRC16 values, adopted by MODBUS agreement.",
     "branch" : "master",
     "repo_url": "https://github.com/imnemo/crc16",
     "tag": false,
@@ -21,7 +21,7 @@
         },
         {
             "title": "Documentation",
-            "grep": "^docs"
+            "grep": "^doc"
         },
         {
             "title": "Others",

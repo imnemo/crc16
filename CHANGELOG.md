@@ -1,6 +1,6 @@
 # node-crc16
 
-_A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement._
+_A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 
@@ -25,7 +25,24 @@ _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agre
 
 
 
+## Documentation
+  - doc:Add readme in English
+  ([339e538e](https://github.com/imnemo/crc16/commit/339e538ee189b6a944ade0dde40d21ee226a79b8))
+  - doc:Add readme in Chinese
+  ([468fd09a](https://github.com/imnemo/crc16/commit/468fd09ab2c6e23594387b462d7e451df951b978))
+
+
+
+
 ## Test
+  - test:Add C++ Unit Test using Catch
+  ([9882e526](https://github.com/imnemo/crc16/commit/9882e526ff9149dff486257d936977828e078d6a))
+  - test:Add supported node version
+  ([8234e473](https://github.com/imnemo/crc16/commit/8234e473335a1a9ec723dbed2dea33110e0abd32))
+  - test:Add CI using tranvis
+  ([45e0ec77](https://github.com/imnemo/crc16/commit/45e0ec7713ffd671a24daff3b4c7f1d70746c0d2))
+  - test:Add code coverage using istanbul
+  ([c1b747ba](https://github.com/imnemo/crc16/commit/c1b747ba1cd424ced7157a72e0417d9fb2d732a1))
   - test:increase the test case to 10000
   ([3f49576d](https://github.com/imnemo/crc16/commit/3f49576d777f56792671f8dea811762957bd9f1c))
   - test:Add unit test
@@ -37,6 +54,8 @@ _A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agre
 
 
 ## Chore
+  - chore:remove debug dependency
+  ([108a5d80](https://github.com/imnemo/crc16/commit/108a5d8022e68a0cae678219c2d43c512eae44d4))
   - chore:update .changelogrc to make a whole versions changelog
   ([21b16ae0](https://github.com/imnemo/crc16/commit/21b16ae0fafe3d5a8371c581d5ee1d7692b8818e))
   - chore:Add .npmignore

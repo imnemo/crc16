@@ -1,7 +1,7 @@
 {
   "name": "node-crc16",
   "version": "1.0.0-beta",
-  "description": "A native node addon to calcalate buffer CRC16 values adopted by Modbus-RTU agreement.",
+  "description": "A native node addon to calcalate CRC16 values, adopted by MODBUS agreement.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --reporter spec",
@@ -19,10 +19,17 @@
     "url": "git+https://github.com/imnemo/crc16.git"
   },
   "keywords": [
+    "crc",
     "crc16",
-    "ModbusRTU",
+    "modbus",
+    "modbus-rtu",
+    "modbus-serial",
+    "modbus-protocol",
     "native",
-    "addon"
+    "addon",
+    "nodejs",
+    "npm",
+    "node-module"
   ],
   "author": "imnemo <oncoding1988@gmail.com>",
   "license": "MIT",
