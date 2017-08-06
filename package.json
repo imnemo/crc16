@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --reporter spec",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "build:node": "make build-node",
     "build:xcode-project": "make build-xcode-project",
     "test:cpp": "make test",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "chai": "4.1.0",
     "chance": "1.0.10",
+    "coveralls": "2.13.1",
     "mocha": "3.4.2",
     "nyc": "11.1.0"
   }
