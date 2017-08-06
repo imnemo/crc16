@@ -2,7 +2,7 @@
 var crc16Native = require('./build/Release/crc16.node');
 var util = require('./util/util');
 
-var parseParam = function (input, encoding, option) {
+var parseParam = function (input, encoding, option, caller) {
   encoding = encoding || 'hex';
   if(typeof encoding === 'object'){
     option = encoding;
@@ -27,7 +27,7 @@ var parseParam = function (input, encoding, option) {
   })()
 
   if (buf === null) {
-    throw new TypeError('crc16.' + option.caller + ' input param invalid!');
+    throw new TypeError('crc16.' + caller + ' input param invalid!');
   }
 
   return {buf: buf, option: option};
