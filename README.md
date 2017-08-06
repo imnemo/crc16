@@ -1,3 +1,11 @@
+[![Build Status](https://travis-ci.org/imnemo/crc16.svg?branch=master)](https://travis-ci.org/imnemo/crc16)
+[![Coverage Status](https://coveralls.io/repos/github/imnemo/crc16/badge.svg?branch=master)](https://coveralls.io/github/imnemo/crc16?branch=master)
+<a href="https://www.npmjs.com/package/node-crc16" alt="NPM latest version"><img src="https://img.shields.io/npm/v/node-crc16.svg"></a>
+<a href="https://www.npmjs.com/package/node-crc16" alt="NPM total downloads"><img src="https://img.shields.io/npm/dt/node-crc16.svg"></a>
+<a href="https://github.com/imnemo/crc16" alt="Github stars"><img src="https://img.shields.io/github/stars/imnemo/crc16.svg?style=social&label=Star"></a>
+<a href="https://github.com/imnemo/crc16" alt="Github forks"><img src="https://img.shields.io/github/forks/imnemo/crc16.svg?style=social&label=Fork"></a>
+<a href="https://github.com/imnemo/crc16" alt="Github contributors"><img src="https://img.shields.io/github/contributors/imnemo/crc16.svg"></a>
+
 # Node CRC16 - ([中文版README](./README-zh.md))
 [MODBUS][1] is an application-layer messaging protocol, positioned at level 7 of the OSI model. It provides client/server communication between devices connected on different types of buses or networks.The `CRC`(Cyclic Redundancy Check) part in protocol, such as [MODBUS over serial line][2](Page 42), and [Modbus-RTU][3](Page 75), adopt the same one algorithm.
 
