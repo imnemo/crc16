@@ -26,6 +26,13 @@ TEST_CASE("CRC16 sum are computed")
         REQUIRE(sum == "96ce");
     }
 
+    SECTION("Checksum can return an unsigned short number")
+    {
+        uint16_t sum;
+        CRC16CheckSum(stream, 24, &sum);
+        REQUIRE(sum == 38606);
+    }
+
     SECTION("Verifysum should be passed")
     {
         bool isValid = CRC16VerifySum(stream, 26);

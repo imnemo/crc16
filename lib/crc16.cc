@@ -65,6 +65,27 @@ static uint8_t const CRCLowTbl[256] = {
     0x43, 0x83, 0x41, 0x81, 0x80, 0x40};
 
 /**
+ * place where magic truely works
+ **/
+void checkSum(uint8_t *pDataIn, int len, uint8_t *sumHigh, uint8_t *sumLow)
+{
+    uint8_t tableIndex = 0;
+
+    //采用len控制for循环结束，更灵活
+    //这样可以对input的一部分做计算
+    int i = 0;
+    if ((0 != len) && (NULL != pDataIn))
+    {
+        for (i = len; i > 0; i--)
+        {
+            tableIndex = *sumHigh ^ (*pDataIn++);
+            *sumHigh = *sumLow ^ CRCHighTbl[tableIndex];
+            *sumLow = CRCLowTbl[tableIndex];
+        }
+    }
+}
+
+/**
 * check crc16 sum by table look-up
 * @param [point] *pDataIn data to be checked
 * @param [int] len data length
@@ -72,21 +93,9 @@ static uint8_t const CRCLowTbl[256] = {
 **/
 char *CRC16CheckSum(uint8_t *pDataIn, int len)
 {
-    uint8_t tableIndex = 0;
     uint8_t sumHigh = 0xFF;
     uint8_t sumLow = 0xFF;
-
-    int i = 0;
-    if ((0 != len) && (NULL != pDataIn))
-    {
-        for (i = len; i > 0; i--)
-        {
-            tableIndex = sumHigh ^ (*pDataIn++);
-            sumHigh = sumLow ^ CRCHighTbl[tableIndex];
-            sumLow = CRCLowTbl[tableIndex];
-        }
-    }
-
+    checkSum(pDataIn, len, &sumHigh, &sumLow);
     char *sum = new char[5];
     sprintf(sum, "%02x%02x", sumHigh, sumLow);
     return sum;
@@ -96,27 +105,31 @@ char *CRC16CheckSum(uint8_t *pDataIn, int len)
 * check crc16 sum by table look-up
 * @param [unsigned char*] *pDataIn data to be checked
 * @param [int] len data length
-* @param [unsigned char*] sum result variable, blow edged
+* @param [unsigned char* array] sum result, BigEndian
 * @return void
 **/
 void CRC16CheckSum(uint8_t *pDataIn, int len, uint8_t *sum)
 {
-    uint8_t tableIndex = 0;
     uint8_t sumHigh = 0xFF;
     uint8_t sumLow = 0xFF;
-
-    int i = 0;
-    if ((0 != len) && (NULL != pDataIn))
-    {
-        for (i = len; i > 0; i--)
-        {
-            tableIndex = sumHigh ^ (*pDataIn++);
-            sumHigh = sumLow ^ CRCHighTbl[tableIndex];
-            sumLow = CRCLowTbl[tableIndex];
-        }
-    }
+    checkSum(pDataIn, len, &sumHigh, &sumLow);
     *sum++ = sumHigh;
     *sum = sumLow;
+}
+
+/**
+* check crc16 sum by table look-up
+* @param [unsigned char*] *pDataIn data to be checked
+* @param [int] len data length
+* @param [unsigned short* number] sum result
+* @return void
+**/
+void CRC16CheckSum(uint8_t *pDataIn, int len, uint16_t *sum)
+{
+    uint8_t sumHigh = 0xFF;
+    uint8_t sumLow = 0xFF;
+    checkSum(pDataIn, len, &sumHigh, &sumLow);
+    *sum = (sumHigh << 8 | sumLow);
 }
 
 /**
@@ -131,16 +144,15 @@ bool CRC16VerifySum(uint8_t *pDataIn, int len)
     uint8_t sumHigh = 0xFF;
     uint8_t sumLow = 0xFF;
 
-    int i = 0;
     if ((0 == len) || (NULL == pDataIn))
     {
         return false;
     }
 
+    int i = 0;
     for (i = len; i > 0; i--)
     {
         tableIndex = sumHigh ^ (*pDataIn++);
-
         sumHigh = sumLow ^ CRCHighTbl[tableIndex];
         sumLow = CRCLowTbl[tableIndex];
     }
