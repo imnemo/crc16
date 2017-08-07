@@ -21,6 +21,8 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 ## Release
+  - release:v1.0.0
+  ([c2975ebd](https://github.com/imnemo/crc16/commit/c2975ebdc7953bb67493e4ff23b4031c3f6e9246))
   - release:v1.0.0-beta
   ([f2931f20](https://github.com/imnemo/crc16/commit/f2931f2091d224de117437786a8559cbee4ea3d6))
 
