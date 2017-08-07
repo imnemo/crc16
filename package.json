@@ -38,7 +38,9 @@
     "url": "https://github.com/imnemo/crc16/issues"
   },
   "homepage": "https://github.com/imnemo/crc16#readme",
-  "dependencies": {},
+  "dependencies": {
+    "deprecate": "1.0.0"
+  },
   "devDependencies": {
     "chai": "4.1.0",
     "chance": "1.0.10",

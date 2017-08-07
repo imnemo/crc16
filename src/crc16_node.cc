@@ -1,5 +1,6 @@
 #include <node.h>
 #include <node_buffer.h>
+#include <string>
 
 #include "./../lib/crc16.cc"
 
@@ -26,12 +27,12 @@ void CRC16CheckSum(const FunctionCallbackInfo<Value> &args)
     Handle<Value> stream = Handle<Value>::Cast(args[0]);
     Handle<Object> option = Handle<Object>::Cast(args[1]);
 
-    bool bIsGetArry = false;
-    Local<String> getArryKey = String::NewFromUtf8(isolate, "getArry");
-    if (option->Has(getArryKey))
+    std::string retType = "hex";
+    Local<String> retTypeKey = String::NewFromUtf8(isolate, "retType");
+    if (option->Has(retTypeKey))
     {
-        Handle<Value> isGetArry = option->Get(getArryKey);
-        bIsGetArry = isGetArry->BooleanValue();
+        String::Utf8Value retTypeNode(option->Get(retTypeKey)->ToString());
+        retType = std::string(*retTypeNode);
     }
 
     uint8_t *bytes = BufferData(stream);
@@ -40,7 +41,7 @@ void CRC16CheckSum(const FunctionCallbackInfo<Value> &args)
         isolate->ThrowException(Exception::TypeError(String::NewFromUtf8(isolate, "Stream buffer can't be empty!")));
     }
 
-    if (bIsGetArry)
+    if (retType == "array")
     {
         uint8_t sumArry[2];
         CRC16CheckSum(bytes, len, sumArry);
@@ -51,12 +52,19 @@ void CRC16CheckSum(const FunctionCallbackInfo<Value> &args)
 
         args.GetReturnValue().Set(sumForReturn);
     }
+    else if(retType == "int")
+    {
+        uint16_t sum;
+        CRC16CheckSum(bytes, len, &sum);
+        args.GetReturnValue().Set(v8::Number::New(isolate, sum));
+    }
     else
     {
         char *sumStr = CRC16CheckSum(bytes, len);
         args.GetReturnValue().Set(String::NewFromUtf8(isolate, sumStr));
     }
 }
+
 void CRC16VerifySum(const FunctionCallbackInfo<Value> &args)
 {
     Isolate *isolate = args.GetIsolate();
