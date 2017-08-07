@@ -4,10 +4,13 @@ var util = require('./../util/util');
 
 var stream = '3a16070a00000000001a0000';
 var sumShouldStr = '98af';
+var sumShouldBuf = util.bufferFactory(sumShouldStr, 'hex');
+var sumShouldInt = sumShouldBuf.readUInt16BE();
 var sumShouldArry = [152, 175];
 
 describe('Syntax to call the apis', function(){
   describe('CheckSum', function(){
+    //exception
     it('Should throw an exception when input stream is null', function(){
       (function(){
         crc16.checkSum(null)
@@ -19,6 +22,7 @@ describe('Syntax to call the apis', function(){
       }).should.throw();
     })
 
+    //params about input
     it('Stream input should be a hex string and return a string sum by default', function(){
       var sum = crc16.checkSum(stream);
       sum.should.equal(sumShouldStr);
@@ -27,13 +31,28 @@ describe('Syntax to call the apis', function(){
       var sum = crc16.checkSum(stream, 'hex');
       sum.should.equal(sumShouldStr);
     })
-    it('Returned sum can be an decimal numbers array', function(){
-      var sum = crc16.checkSum(stream, {getArry: true});
-      sum.should.eql(sumShouldArry);
-    })
     it('Stream input can be a buffer', function(){
       var sum = crc16.checkSum(util.bufferFactory(stream, 'hex'));
       sum.should.equal(sumShouldStr);
+    })
+
+    //params about output
+    it('Returned sum can be an unsigned short int', function(){
+      var sum = crc16.checkSum(stream, {retType: 'int'});
+      sum.should.eql(sumShouldInt);
+    })
+    it('Returned sum can be a buffer', function(){
+      var sum = crc16.checkSum(stream, {retType: 'buffer'});
+      Buffer.isBuffer(sum).should.equal(true);
+      sum.compare(sumShouldBuf).should.eql(0);
+    })
+    it('Returned sum can be a decimal numbers array', function(){
+      var sum = crc16.checkSum(stream, {retType: 'array'});
+      sum.should.eql(sumShouldArry);
+    })
+    it('Returned sum should be a hex string when option.retType is not set or invalid', function(){
+      var sum = crc16.checkSum(stream, {retType: 'anything else'});
+      sum.should.eql(sumShouldStr);
     })
   })
 
