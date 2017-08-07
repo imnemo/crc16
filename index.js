@@ -48,8 +48,13 @@ var crc16 = {
    * @param option object
    * @example checkSum('301a', 'hex')
    * @example checkSum('301a')
-   * @example checkSum(Buffer.from('301a', {getArry: true})) default getArry is false
-   * @return return array when option.getArry == true or return string
+   * @example checkSum(Buffer.from('301a', 'hex'))
+   * @example checkSum('301a', {retType: 'int'}) default retType is hex
+   * @return
+   *  hex string when option.retType == 'hex'
+   *  array when option.retType == 'array'
+   *  unsigned short int when option.retType == 'int'
+   *  Buffer when option.retType == 'buffer'
    */
   checkSum: function (input, encoding, option) {
     var param = parseParam(input, encoding, option);
@@ -70,8 +75,9 @@ var crc16 = {
    * @param input string | buffer
    * @param encoding string 'hex' default
    * @param option object
-   * @example verifySum('301a', 'hex')
-   * @example verifySum('301a')
+   * @example verifySum('301a947b', 'hex')
+   * @example verifySum('301a947b')
+   * @example checkSum(Buffer.from('301a947b', 'hex'))
    * @return return bool true | false
    */
   verifySum: function (input, encoding, option) {
