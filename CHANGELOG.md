@@ -5,6 +5,8 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 ## Bug Fixes
+  - fix a param check bug
+  ([de764db8](https://github.com/imnemo/crc16/commit/de764db8e5ae9e250a10006e4a0fd7f97440c33a))
   - fix:Buffer factory bug when node version is less than v5.10.0
   ([6fc831e1](https://github.com/imnemo/crc16/commit/6fc831e1841ee8045085853cc8c3c07f1a20d9e0))
 
@@ -26,6 +28,8 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 ## Documentation
+  - doc:Add some badges
+  ([d1821c77](https://github.com/imnemo/crc16/commit/d1821c77a7f986446ad2b2fb79b806cd446bde7c))
   - doc:Add readme in English
   ([339e538e](https://github.com/imnemo/crc16/commit/339e538ee189b6a944ade0dde40d21ee226a79b8))
   - doc:Add readme in Chinese
@@ -34,7 +38,22 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 
+## Refactor
+  - refactor:deprecate option.getArry and turn it to option.retType
+  ([8af05e59](https://github.com/imnemo/crc16/commit/8af05e59a13a5b070cd80a70eb21de7a19ba74cf))
+  - refactor:c++ implementation
+  ([c65f543d](https://github.com/imnemo/crc16/commit/c65f543da1997c923e4001ea231fbdf47ccb17c1))
+
+
+
+
 ## Test
+  - test:Add unit test about option.retType
+  ([a31f11e1](https://github.com/imnemo/crc16/commit/a31f11e166ac030d86a19f8624c6d4ee20efd0d0))
+  - test:Add the exception test branch
+  ([7f3e383e](https://github.com/imnemo/crc16/commit/7f3e383ec820cdd03cb78985ad69e877a0c14050))
+  - test:Integrating with Coveralls
+  ([a6707fca](https://github.com/imnemo/crc16/commit/a6707fca4b657ffa947d5d10c0dc8f8560575c94))
   - test:Add C++ Unit Test using Catch
   ([9882e526](https://github.com/imnemo/crc16/commit/9882e526ff9149dff486257d936977828e078d6a))
   - test:Add supported node version
