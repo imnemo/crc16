@@ -98,6 +98,7 @@ You can pull a request when you complete all steps above.
   - [x] Add CI
   - [ ] Add performance test
   - [ ] Add global module supported to provide a cli tool
+  - [ ] Refactor node native addon part with NAN
   - [ ] Add donate entry
 
 
