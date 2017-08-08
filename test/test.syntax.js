@@ -50,8 +50,12 @@ describe('Syntax to call the apis', function(){
       var sum = crc16.checkSum(stream, {retType: 'array'});
       sum.should.eql(sumShouldArry);
     })
-    it('Returned sum should be a hex string when option.retType is not set or invalid', function(){
+    it('Returned sum should be a hex string when option.retType is anything else string', function(){
       var sum = crc16.checkSum(stream, {retType: 'anything else'});
+      sum.should.eql(sumShouldStr);
+    })
+    it('Returned sum should be a hex string when option.retType is not a string', function(){
+      var sum = crc16.checkSum(stream, {retType: {foo: 'bar'}});
       sum.should.eql(sumShouldStr);
     })
   })

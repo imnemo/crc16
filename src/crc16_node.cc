@@ -29,7 +29,7 @@ void CRC16CheckSum(const FunctionCallbackInfo<Value> &args)
 
     std::string retType = "hex";
     Local<String> retTypeKey = String::NewFromUtf8(isolate, "retType");
-    if (option->Has(retTypeKey))
+    if (option->Has(retTypeKey) && option->Get(retTypeKey)->IsString())
     {
         String::Utf8Value retTypeNode(option->Get(retTypeKey)->ToString());
         retType = std::string(*retTypeNode);
