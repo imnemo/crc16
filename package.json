@@ -1,7 +1,7 @@
 {
   "name": "node-crc16",
   "version": "1.0.0",
-  "description": "A native node addon to calcalate CRC16 values, adopted by MODBUS agreement.",
+  "description": "A native node addon to calcalate and verify CRC16 values, adopted by MODBUS agreement.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --reporter spec",
