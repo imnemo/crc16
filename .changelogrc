@@ -44,6 +44,10 @@
             "grep": "^test"
         },
         {
+            "title": "Benchmark",
+            "grep": "^benchmark"
+        },
+        {
             "title": "Chore",
             "grep": "^chore"
         },

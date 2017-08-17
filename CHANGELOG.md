@@ -74,6 +74,15 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 
+## Benchmark
+  - benchmark:Add benchmark using nanobench
+  ([0d00333b](https://github.com/imnemo/crc16/commit/0d00333bccd997731ae61a94711170b2254ac083))
+  - benchmark:Add benchmark using benchmark.js
+  ([d1c55320](https://github.com/imnemo/crc16/commit/d1c55320677cf48f1b40debd098fbbc780b4c1e2))
+
+
+
+
 ## Chore
   - chore:remove debug dependency
   ([108a5d80](https://github.com/imnemo/crc16/commit/108a5d8022e68a0cae678219c2d43c512eae44d4))
