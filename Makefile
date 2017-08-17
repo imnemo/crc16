@@ -15,6 +15,9 @@ test-cpp:
 
 test: test-cpp
 
+benchmark.js:
+	npm run benchmark
+
 .PHONY: clean
 clean:
 	rm -fr build

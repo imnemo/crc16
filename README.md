@@ -85,6 +85,19 @@ make test
 ### JS unit testing
 `npm test` or `./node_modules/.bin/mocha --reporter spec`
 
+### Benchmark
+#### use benchmark.js
+```bash
+ >>> npm run benchmark
+
+> node-crc16@1.0.0 benchmark /Users/nemo/code/imnemo/crc16
+> node benchmark/benchmark.js
+
+CEC16#checkSum x 905,071 ops/sec ±2.00% (83 runs sampled)
+CRC16#verifySum x 1,540,940 ops/sec ±19.92% (65 runs sampled)
+Fastest is CRC16#verifySum
+```
+
 ### pull request
 You can pull a request when you complete all steps above.
 

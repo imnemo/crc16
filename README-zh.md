@@ -87,6 +87,19 @@ make test
 ### JS单元测试
 `npm test` 或者 `./node_modules/.bin/mocha --reporter spec`
 
+### 性能基准测试
+#### 使用benchmark.js
+```bash
+ >>> npm run benchmark
+
+> node-crc16@1.0.0 benchmark /Users/nemo/code/imnemo/crc16
+> node benchmark/benchmark.js
+
+CEC16#checkSum x 905,071 ops/sec ±2.00% (83 runs sampled)
+CRC16#verifySum x 1,540,940 ops/sec ±19.92% (65 runs sampled)
+Fastest is CRC16#verifySum
+```
+
 ### 提交
 所有单元测试通过后，您就可以Pull一个Request了 :)
 

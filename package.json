@@ -6,6 +6,7 @@
   "scripts": {
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --reporter spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "benchmark": "node benchmark/benchmark.js",
     "build:node": "make build-node",
     "build:xcode-project": "make build-xcode-project",
     "test:cpp": "make test",
@@ -42,10 +43,12 @@
     "deprecate": "1.0.0"
   },
   "devDependencies": {
+    "benchmark": "2.1.4",
     "chai": "4.1.0",
     "chance": "1.0.10",
     "coveralls": "2.13.1",
     "mocha": "3.4.2",
+    "nanobench": "2.1.0",
     "nyc": "11.1.0"
   }
 }
