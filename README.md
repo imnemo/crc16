@@ -98,6 +98,26 @@ CRC16#verifySum x 1,540,940 ops/sec ±19.92% (65 runs sampled)
 Fastest is CRC16#verifySum
 ```
 
+#### use nanobench
+```bash
+ >>> npm run nanobench
+
+> node-crc16@1.0.0 nanobench /Users/nemo/code/imnemo/crc16
+> node benchmark/nanobench.js
+
+NANOBENCH version 2
+> /Users/nemo/.nvm/versions/node/v8.1.2/bin/node benchmark/nanobench.js
+
+# CRC16#checkSum 2,000,000 times
+ok ~3.17 s (3 s + 166422442 ns)
+
+# CRC16#verifySum 2,000,000 times
+ok ~2.85 s (2 s + 848059820 ns)
+
+all benchmarks completed
+ok ~6.01 s (6 s + 14482262 ns)
+```
+
 ### pull request
 You can pull a request when you complete all steps above.
 
@@ -109,7 +129,7 @@ You can pull a request when you complete all steps above.
   - [x] Add JS unit test code covarage
   - [x] Add C++ unit test
   - [x] Add CI
-  - [ ] Add performance test
+  - [x] Add performance test
   - [ ] Add global module supported to provide a cli tool
   - [ ] Refactor node native addon part with NAN
   - [ ] Add donate entry

@@ -7,6 +7,7 @@
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --reporter spec",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "benchmark": "node benchmark/benchmark.js",
+    "nanobench": "node benchmark/nanobench.js",
     "build:node": "make build-node",
     "build:xcode-project": "make build-xcode-project",
     "test:cpp": "make test",

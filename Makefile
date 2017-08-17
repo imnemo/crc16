@@ -18,6 +18,9 @@ test: test-cpp
 benchmark.js:
 	npm run benchmark
 
+nanobench:
+	npm run nanobench
+
 .PHONY: clean
 clean:
 	rm -fr build

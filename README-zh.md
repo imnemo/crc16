@@ -100,6 +100,26 @@ CRC16#verifySum x 1,540,940 ops/sec ±19.92% (65 runs sampled)
 Fastest is CRC16#verifySum
 ```
 
+#### 使用nanobench
+```bash
+ >>> npm run nanobench
+
+> node-crc16@1.0.0 nanobench /Users/nemo/code/imnemo/crc16
+> node benchmark/nanobench.js
+
+NANOBENCH version 2
+> /Users/nemo/.nvm/versions/node/v8.1.2/bin/node benchmark/nanobench.js
+
+# CRC16#checkSum 2,000,000 times
+ok ~3.17 s (3 s + 166422442 ns)
+
+# CRC16#verifySum 2,000,000 times
+ok ~2.85 s (2 s + 848059820 ns)
+
+all benchmarks completed
+ok ~6.01 s (6 s + 14482262 ns)
+```
+
 ### 提交
 所有单元测试通过后，您就可以Pull一个Request了 :)
 
@@ -111,7 +131,7 @@ Fastest is CRC16#verifySum
   - [x] 增加JS代码测试覆盖率
   - [x] 增加C++代码单元测试
   - [x] 增加持续集成
-  - [ ] 增加性能测试
+  - [x] 增加性能测试
   - [ ] 支持全局模块，提供CLI
   - [ ] 用NAN重构Node原生模块部分
   - [ ] 增加打赏入口
