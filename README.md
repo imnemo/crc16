@@ -23,7 +23,7 @@ Tips: the intuitive decription about this module is the comment in [src](./index
 ### generate a sum `crc16.checkSum`
 `checkSum`accept three params, the first two params `(input, [encoding])` construct a buffer
 ```javascript
-crc16.checkSum('一个utf8字符串', 'utf8')
+crc16.checkSum('utf8 string', 'utf8')
 ```
 default `encoding` is `hex`
 ```javascript
@@ -133,6 +133,15 @@ You can pull a request when you complete all steps above.
   - [ ] Add global module supported to provide a cli tool
   - [ ] Refactor node native addon part with NAN
   - [ ] Add donate entry
+
+---
+<p align="center">
+twitter: <a href="https://twitter.com/imoncoding" alt="@imoncoding">@imoncoding</a>
+</p>
+<p align="center">
+<img width="430" height="430" src="https://mmbiz.qpic.cn/mmbiz_jpg/sg8hWfj2QwQClcLCezja7FxHicg4Y3BALBPW3pjqib0iaz7YCMtPOSh4JOuvfEKw73GjKvgiaNMSqmuX4RlYNzlavQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1" alt="qrcode_mp_oncoding">
+</p>
+<p align="center">Welcome to subscribe my wechat!</p>
 
 
 
