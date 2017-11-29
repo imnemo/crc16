@@ -2,6 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/imnemo/crc16/badge.svg?branch=master)](https://coveralls.io/github/imnemo/crc16?branch=master)
 <a href="https://www.npmjs.com/package/node-crc16" alt="NPM latest version"><img src="https://img.shields.io/npm/v/node-crc16.svg"></a>
 <a href="https://npms.io/search?q=node-crc16" alt="NPM latest version"><img src="https://badges.npms.io/node-crc16.svg"></a>
+<a href="https://deepscan.io/dashboard/#view=project&pid=1291&bid=3472"><img src="https://deepscan.io/api/projects/1291/branches/3472/badge/grade.svg" alt="DeepScan Grade"></a>
 <a href="https://www.npmjs.com/package/node-crc16" alt="NPM total downloads"><img src="https://img.shields.io/npm/dt/node-crc16.svg"></a>
 <a href="https://github.com/imnemo/crc16" alt="Github stars"><img src="https://img.shields.io/github/stars/imnemo/crc16.svg?style=social&label=Star"></a>
 <a href="https://github.com/imnemo/crc16" alt="Github forks"><img src="https://img.shields.io/github/forks/imnemo/crc16.svg?style=social&label=Fork"></a>
