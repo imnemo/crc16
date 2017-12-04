@@ -7,6 +7,7 @@
 <a href="https://github.com/imnemo/crc16" alt="Github stars"><img src="https://img.shields.io/github/stars/imnemo/crc16.svg?style=social&label=Star"></a>
 <a href="https://github.com/imnemo/crc16" alt="Github forks"><img src="https://img.shields.io/github/forks/imnemo/crc16.svg?style=social&label=Fork"></a>
 <a href="https://github.com/imnemo/crc16" alt="Github contributors"><img src="https://img.shields.io/github/contributors/imnemo/crc16.svg"></a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fimnemo%2Fcrc16?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fimnemo%2Fcrc16.svg?type=shield"/></a>
 
 # Node CRC16 - ([中文版README](./README-zh.md))
 [MODBUS][1] is an application-layer messaging protocol, positioned at level 7 of the OSI model. It provides client/server communication between devices connected on different types of buses or networks.The `CRC`(Cyclic Redundancy Check) part in protocol, such as [MODBUS over serial line][2](Page 42), and [Modbus-RTU][3](Page 75), adopt the same one algorithm.
@@ -150,3 +151,7 @@ twitter: <a href="https://twitter.com/imoncoding" alt="@imoncoding">@imoncoding<
 [1]: http://modbus.org/specs.php
 [2]: https://www.honeywellprocess.com/library/support/Public/Documents/51-52-25-66.pdf
 [3]: http://modbus.org/docs/Modbus_over_serial_line_V1_02.pdf
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fimnemo%2Fcrc16.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fimnemo%2Fcrc16?ref=badge_large)
