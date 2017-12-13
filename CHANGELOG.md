@@ -41,6 +41,8 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 ## Refactor
+  - refactor:Remove bufferfactory util
+  ([c91c3488](https://github.com/imnemo/crc16/commit/c91c348870b002b4f04d6635ce4de82d57e302a3))
   - refactor:deprecate option.getArry and turn it to option.retType
   ([8af05e59](https://github.com/imnemo/crc16/commit/8af05e59a13a5b070cd80a70eb21de7a19ba74cf))
   - refactor:c++ implementation
@@ -76,9 +78,9 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 ## Benchmark
   - benchmark:Add benchmark using nanobench
-  ([0d00333b](https://github.com/imnemo/crc16/commit/0d00333bccd997731ae61a94711170b2254ac083))
+  ([ca4156cf](https://github.com/imnemo/crc16/commit/ca4156cfb1c3fea5c1a7cdccf8e07b34a676c032))
   - benchmark:Add benchmark using benchmark.js
-  ([d1c55320](https://github.com/imnemo/crc16/commit/d1c55320677cf48f1b40debd098fbbc780b4c1e2))
+  ([06453f52](https://github.com/imnemo/crc16/commit/06453f52b3d823f8ba5c2f6d96348f73b0eeeeb6))
 
 
 
