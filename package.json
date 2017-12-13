@@ -15,7 +15,7 @@
     "clean": "make clean"
   },
   "engines": {
-    "node": ">=4.2.6"
+    "node": ">=4.0.0"
   },
   "repository": {
     "type": "git",
