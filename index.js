@@ -1,7 +1,7 @@
 // var debug = require('debug')('node-crc16');
 var deprecate = require('deprecate');
+var bufferFactory = require('buffer-factory');
 var crc16Native = require('./build/Release/crc16.node');
-var util = require('./util/util');
 
 var parseParam = function (input, encoding, option) {
   encoding = encoding || 'hex';
@@ -22,13 +22,13 @@ var parseParam = function (input, encoding, option) {
   var buf = (function () {
     if (typeof input === 'string') {
       try {
-        return util.bufferFactory(input, encoding);
+        input = bufferFactory(input, encoding);
       } catch (e) {
         console.trace(e);
         return null;
       }
     }
-    if (Buffer.isBuffer(input)) {
+    if (Buffer.isBuffer(input) && input.length > 0 && input.byteLength > 0) {
       return input;
     }
     return null;
@@ -65,7 +65,7 @@ var crc16 = {
      * 后续可以直接在node native里直接返回buffer
      */
     if(param.option.retType === 'buffer'){
-      return util.bufferFactory(sum, 'hex');
+      return bufferFactory(sum, 'hex');
     }
     return sum;
   },

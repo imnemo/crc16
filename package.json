@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/imnemo/crc16#readme",
   "dependencies": {
+    "buffer-factory": "1.0.0-alpha",
     "deprecate": "1.0.0"
   },
   "devDependencies": {

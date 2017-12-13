@@ -1,7 +1,6 @@
 var should = require('chai').should();
 var deprecate = require('deprecate');
 var crc16 = require('../index');
-var util = require('./../util/util');
 
 var stream = '3a16070a00000000001a0000';
 var sumShouldStr = '98af';
