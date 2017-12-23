@@ -40,6 +40,7 @@
     "url": "https://github.com/imnemo/crc16/issues"
   },
   "homepage": "https://github.com/imnemo/crc16#readme",
+  "runkitExampleFilename": "example/runkit.js",
   "dependencies": {
     "buffer-factory": "1.0.0-alpha",
     "deprecate": "1.0.0"
