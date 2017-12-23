@@ -30,6 +30,8 @@ _A native node addon to calcalate CRC16 values, adopted by MODBUS agreement._
 
 
 ## Documentation
+  - doc:Add Runkit example code
+  ([b344adc6](https://github.com/imnemo/crc16/commit/b344adc69acf251902e46ca4aad53d6d0c3f8f24))
   - doc:Add some badges
   ([d1821c77](https://github.com/imnemo/crc16/commit/d1821c77a7f986446ad2b2fb79b806cd446bde7c))
   - doc:Add readme in English
