@@ -3,4 +3,11 @@ test
 .changelogrc
 .editorconfig
 .gitignore
+.istanbul.yml
+_config.yml
+.tranvis.yml
 Makefile
+build
+.nyc_output
+coverage
+node_modules
