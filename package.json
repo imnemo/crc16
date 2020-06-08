@@ -1,6 +1,6 @@
 {
   "name": "node-crc16",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A native node addon to calcalate and verify CRC16 values, adopted by MODBUS agreement.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "build:xcode-project": "make build-xcode-project",
     "test:cpp": "make test",
     "test:node": "npm test",
-    "clean": "make clean"
+    "clean": "make clean",
+    "preinstall": "node ./preinstall.js"
   },
   "engines": {
     "node": ">=4.0.0"
