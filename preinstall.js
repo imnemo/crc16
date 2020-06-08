@@ -7,14 +7,16 @@ function isLargerOrEqual(versionA, versionB) {
   if (versionA === versionB)
     return true;
 
-  var ver1 = versionA.split('.');
-  var ver2 = versionB.split('.');
+  var ver1 = versionA.substr(1).split('.');
+  var ver2 = versionB.substr(1).split('.');
 
   var len = ver1.length;
   for (var i = 0; i < len; i++) {
-    if (ver1[i] > ver2[i])
+    var v1 = parseInt(ver1[i]);
+    var v2 = parseInt(ver2[i]);
+    if (v1 > v2)
       return true;
-    if (ver1[i] < ver2[i])
+    if (v1 < v2)
       return false;
   }
 }
