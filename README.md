@@ -17,6 +17,10 @@
 
 This module has been well unit tested and documented.
 
+## Versions
+
+If your version of node.js is lower than `v12`, please use the latest `v1.x.x` of the module, or you should select `v2.x.x`, which introduces `NAPI` to implement native addon gracefully and compatibly.
+
 ## Usage
 
 Tips: the intuitive decription about this module is the comment in [src](./index.js) and the code in [unit test](./test) :).
