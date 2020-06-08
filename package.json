@@ -13,7 +13,8 @@
     "test:cpp": "make test",
     "test:node": "npm test",
     "clean": "make clean",
-    "preinstall": "node ./preinstall.js"
+    "preinstall": "node ./preinstall.js",
+    "install": "node-gyp rebuild"
   },
   "engines": {
     "node": ">=4.0.0"

@@ -27,5 +27,7 @@ if (isLargerOrEqual(process.version, 'v12.0.0')) {
     please use node-crc16@2 instead.
 `
   );
-  process.exit(1)
+  process.exit(1);
+} else {
+  process.exit(0);
 }
