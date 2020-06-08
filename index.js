@@ -1,23 +1,13 @@
-// var debug = require('debug')('node-crc16');
-var deprecate = require('deprecate');
 var bufferFactory = require('buffer-factory');
 var crc16Native = require('./build/Release/crc16.node');
 
 var parseParam = function (input, encoding, option) {
   encoding = encoding || 'hex';
-  if(typeof encoding === 'object'){
+  if (typeof encoding === 'object') {
     option = encoding;
     encoding = 'hex';
   }
   option = option || {};
-  if(option.getArry !== undefined && option.retType === undefined){
-    deprecate('crc16.checkSum: option.getArry is deprecated! use option.retType instead.');
-    if(option.getArry == true){
-      option.retType = 'array';
-    }else if(option.getArry == false){
-      option.retType = 'hex';
-    }
-  }
 
   var buf = (function () {
     if (typeof input === 'string') {
@@ -38,7 +28,7 @@ var parseParam = function (input, encoding, option) {
     throw new TypeError('crc16.' + arguments.callee.caller.name + ' input param invalid!');
   }
 
-  return {buf: buf, option: option};
+  return { buf: buf, option: option };
 }
 var crc16 = {
   /**
@@ -64,7 +54,7 @@ var crc16 = {
      * option.retType == 'buffer'时，crc16_node.cc会忽略，按retType == 'hex'执行
      * 后续可以直接在node native里直接返回buffer
      */
-    if(param.option.retType === 'buffer'){
+    if (param.option.retType === 'buffer') {
       return bufferFactory(sum, 'hex');
     }
     return sum;

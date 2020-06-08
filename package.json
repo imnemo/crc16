@@ -17,7 +17,7 @@
     "install": "node-gyp rebuild"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">8.0.0"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "modbus-protocol",
     "native",
     "addon",
+    "napi",
     "nodejs",
     "npm",
     "node-module"
@@ -44,8 +45,7 @@
   "homepage": "https://github.com/imnemo/crc16#readme",
   "runkitExampleFilename": "example/runkit.js",
   "dependencies": {
-    "buffer-factory": "1.0.0-alpha",
-    "deprecate": "1.0.0"
+    "buffer-factory": "1.0.0-alpha"
   },
   "devDependencies": {
     "benchmark": "2.1.4",
