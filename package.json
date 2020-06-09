@@ -45,7 +45,7 @@
   "homepage": "https://github.com/imnemo/crc16#readme",
   "runkitExampleFilename": "example/runkit.js",
   "dependencies": {
-    "buffer-factory": "1.0.0-alpha",
+    "buffer-factory": "1.0.5",
     "node-addon-api": "3.0.0"
   },
   "devDependencies": {
