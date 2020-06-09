@@ -15,11 +15,11 @@
 
 `node-crc16` implement the c++ version of this algorithm by table look-up, and also provide a node native addon and a nodejs version wrapper.
 
-This module has been well unit tested and documented.
+*This module has been well unit tested and documented.*
 
 ## Versions
 
-If your version of node.js is lower than `v12`, please use the latest `v1.x.x` of the module, or you should select `v2.x.x`, which introduces `NAPI` to implement native addon gracefully and compatibly.
+If your version of node.js is lower than `v8.x.x`, please use the latest `v1.x.x` of the module, or you should select `v2.x.x`, which introduces `NAPI` to implement native addon gracefully and compatibly.
 
 ## Usage
 

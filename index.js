@@ -1,5 +1,6 @@
 var bufferFactory = require('buffer-factory');
-var crc16Native = require('./build/Release/crc16.node');
+// var crc16Native = require('./build/Release/crc16.node');
+var crc16Native = require('/Users/nemo/Library/Developer/Xcode/DerivedData/binding-dmvdebsqmzrlajbazrgcbwaidfiq/Build/Products/Debug/crc16.node');
 
 var parseParam = function (input, encoding, option) {
   encoding = encoding || 'hex';
@@ -30,6 +31,7 @@ var parseParam = function (input, encoding, option) {
 
   return { buf: buf, option: option };
 }
+
 var crc16 = {
   /**
    * checkSum

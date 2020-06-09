@@ -1,9 +1,16 @@
 {
     "targets": [{
         "target_name": "crc16",
-        "sources": ["./src/crc16_node.cc"]
+        "sources": ["./src/crc16_node.cc"],
+        "cflags!": [ "-fno-exceptions" ],
+        "cflags_cc!": [ "-fno-exceptions" ],
+        "include_dirs": [
+        "<!@(node -p \"require('node-addon-api').include\")"
+      ],
+      'defines': [ 'NAPI_DISABLE_CPP_EXCEPTIONS' ]
     }]
-    , "cflags": ["-Wall", "-O3", "-std=c++11"]
+    , "cflags": ["-Wall", "-O3", "-std=c++11", "-fno-exceptions"]
+    , "cflags_cc": ["-Wall", "-O3", "-std=c++11", "-fno-exceptions"]
     , "xcode_settings": {
         'OTHER_CFLAGS': ['-std=c++11'],
     }

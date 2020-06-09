@@ -21,10 +21,10 @@ function isLargerOrEqual(versionA, versionB) {
   }
 }
 
-if (isLargerOrEqual(process.version, 'v12.0.0')) {
+if (!isLargerOrEqual(process.version, 'v8.0.0')) {
   console.error('\033[1;31m' + `
-    now your node version is larger than or equal to v12.0.0, 
-    please use node-crc16@2 instead.
+    now your node version is lower than v8.0.0, 
+    please use node-crc16@1.x.x instead.
 `
   );
   process.exit(1);
