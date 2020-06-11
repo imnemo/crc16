@@ -49,7 +49,7 @@ Napi::Value NODECRC16CheckSum(const Napi::CallbackInfo &info)
     {
         retType = option.Get(retTypeKey).ToString();
     }
-
+    
     if (retType == "array")
     {
         uint8_t sumArry[2];
@@ -60,6 +60,17 @@ Napi::Value NODECRC16CheckSum(const Napi::CallbackInfo &info)
         sumForReturn[1] = sumArry[1];
 
         return sumForReturn;
+    }
+    else if (retType == "buffer")
+    {
+        uint8_t sumArry[2];
+        CRC16CheckSum(bytes, len, sumArry);
+        
+        Napi::Buffer<uint8_t> sumBufferForReturn = Napi::Buffer<uint8_t>::New(env, 2);
+        sumBufferForReturn.Data()[0U] = sumArry[0];
+        sumBufferForReturn.Data()[1] = sumArry[1];
+        
+        return sumBufferForReturn;
     }
     else if (retType == "int")
     {

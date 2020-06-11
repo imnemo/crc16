@@ -50,14 +50,6 @@ var crc16 = {
   checkSum: function (input, encoding, option) {
     var param = parseParam(input, encoding, option);
     var sum = crc16Native.checkSum(param.buf, param.option);
-    /**
-     * @TODO
-     * option.retType == 'buffer'时，crc16_node.cc会忽略，按retType == 'hex'执行
-     * 后续可以直接在node native里直接返回buffer
-     */
-    if (param.option.retType === 'buffer') {
-      return bufferFactory(sum, 'hex');
-    }
     return sum;
   },
 
