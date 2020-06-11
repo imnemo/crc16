@@ -138,8 +138,8 @@ You can pull a request when you complete all steps above.
   - [x] Add C++ unit test
   - [x] Add CI
   - [x] Add performance test
+  - [x] Refactor node native addon part with NAN
   - [ ] Add global module supported to provide a cli tool
-  - [ ] Refactor node native addon part with NAN
   - [ ] Add donate entry
 
 ---
