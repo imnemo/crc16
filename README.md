@@ -138,7 +138,7 @@ You can pull a request when you complete all steps above.
   - [x] Add C++ unit test
   - [x] Add CI
   - [x] Add performance test
-  - [x] Refactor node native addon part with NAN
+  - [x] Refactor node native addon part with NAPI
   - [ ] Add global module supported to provide a cli tool
   - [ ] Add donate entry
 
