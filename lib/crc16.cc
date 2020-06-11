@@ -67,13 +67,13 @@ static uint8_t const CRCLowTbl[256] = {
 /**
  * place where magic truely works
  **/
-void checkSum(uint8_t *pDataIn, int len, uint8_t *sumHigh, uint8_t *sumLow)
+void checkSum(uint8_t *pDataIn, size_t len, uint8_t *sumHigh, uint8_t *sumLow)
 {
     uint8_t tableIndex = 0;
 
     //采用len控制for循环结束，更灵活
     //这样可以对input的一部分做计算
-    int i = 0;
+    size_t i = 0;
     if ((0 != len) && (NULL != pDataIn))
     {
         for (i = len; i > 0; i--)
@@ -91,7 +91,7 @@ void checkSum(uint8_t *pDataIn, int len, uint8_t *sumHigh, uint8_t *sumLow)
 * @param [int] len data length
 * @return [char*] result sum, hex code string
 **/
-char *CRC16CheckSum(uint8_t *pDataIn, int len)
+char *CRC16CheckSum(uint8_t *pDataIn, size_t len)
 {
     uint8_t sumHigh = 0xFF;
     uint8_t sumLow = 0xFF;
@@ -108,7 +108,7 @@ char *CRC16CheckSum(uint8_t *pDataIn, int len)
 * @param [unsigned char* array] sum result, BigEndian
 * @return void
 **/
-void CRC16CheckSum(uint8_t *pDataIn, int len, uint8_t *sum)
+void CRC16CheckSum(uint8_t *pDataIn, size_t len, uint8_t *sum)
 {
     uint8_t sumHigh = 0xFF;
     uint8_t sumLow = 0xFF;
@@ -124,7 +124,7 @@ void CRC16CheckSum(uint8_t *pDataIn, int len, uint8_t *sum)
 * @param [unsigned short* number] sum result
 * @return void
 **/
-void CRC16CheckSum(uint8_t *pDataIn, int len, uint16_t *sum)
+void CRC16CheckSum(uint8_t *pDataIn, size_t len, uint16_t *sum)
 {
     uint8_t sumHigh = 0xFF;
     uint8_t sumLow = 0xFF;
@@ -138,7 +138,7 @@ void CRC16CheckSum(uint8_t *pDataIn, int len, uint16_t *sum)
 * @param [int] len data length
 * @return bool
 **/
-bool CRC16VerifySum(uint8_t *pDataIn, int len)
+bool CRC16VerifySum(uint8_t *pDataIn, size_t len)
 {
     uint8_t tableIndex = 0;
     uint8_t sumHigh = 0xFF;
@@ -149,7 +149,7 @@ bool CRC16VerifySum(uint8_t *pDataIn, int len)
         return false;
     }
 
-    int i = 0;
+    size_t i = 0;
     for (i = len; i > 0; i--)
     {
         tableIndex = sumHigh ^ (*pDataIn++);
