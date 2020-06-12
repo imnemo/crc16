@@ -4,6 +4,7 @@
 **/*.out
 **/*.dSYM
 build
+binding.xcodeproj
 
 # Logs
 logs
@@ -63,4 +64,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
