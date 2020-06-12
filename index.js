@@ -1,4 +1,5 @@
 var bufferFactory = require('buffer-factory');
+// eslint-disable-next-line import/no-unresolved
 var crc16Native = require('./build/Release/crc16.node');
 
 var parseParam = function (input, encoding, option) {
@@ -22,14 +23,14 @@ var parseParam = function (input, encoding, option) {
       return input;
     }
     return null;
-  })()
+  }());
 
   if (buf === null) {
-    throw new TypeError('crc16.' + arguments.callee.caller.name + ' input param invalid!');
+    throw new TypeError(`crc16.${arguments.callee.caller.name} input param invalid!`);
   }
 
-  return { buf: buf, option: option };
-}
+  return { buf, option };
+};
 
 var crc16 = {
   /**
@@ -47,7 +48,7 @@ var crc16 = {
    *  unsigned short int when option.retType == 'int'
    *  Buffer when option.retType == 'buffer'
    */
-  checkSum: function (input, encoding, option) {
+  checkSum(input, encoding, option) {
     var param = parseParam(input, encoding, option);
     var sum = crc16Native.checkSum(param.buf, param.option);
     return sum;
@@ -63,12 +64,10 @@ var crc16 = {
    * @example checkSum(Buffer.from('301a947b', 'hex'))
    * @return return bool true | false
    */
-  verifySum: function (input, encoding, option) {
+  verifySum(input, encoding, option) {
     var param = parseParam(input, encoding, option);
     return crc16Native.verifySum(param.buf, param.option);
-  }
+  },
 };
 
 module.exports = crc16;
-
-
