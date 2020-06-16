@@ -19,17 +19,17 @@
 
 ## Versions
 
-If your version of node.js is lower than `v8.x.x`, please use the latest `v1.x.x` of the module, or you should select `v2.x.x`, which introduces `NAPI` to implement native addon gracefully and compatibly.
+If your version of node.js is lower than `v8.x.x`, please use the latest `v1.x.x` of this module, or you should select `v2.x.x`, which uses `NAPI` to implement native addon gracefully and compatibly.
 
 ## Usage
 
-Tips: the intuitive decription about this module is the comment in [src](./index.js) and the code in [unit test](./test) :).
+Tips: the most intuitive decription about this module is the comment in [src](./index.js) and the code in [unit test](./test) :).
 
 ### Install
 `npm install node-crc16`
 
-### generate a sum `crc16.checkSum`
-`checkSum`accept three params, the first two params `(input, [encoding])` construct a buffer
+### generate a sum by `crc16.checkSum`
+`checkSum`accept three params, the first two params `(input, [encoding])` construct a `Buffer`
 ```javascript
 crc16.checkSum('utf8 string', 'utf8')
 ```
@@ -38,7 +38,7 @@ default `encoding` is `hex`
 var sum = crc16.checkSum('a031ffb7');
 sum.should.equal('726d');
 ```
-the third param is `option`，an object
+the third param is `option`，which type is `Object`
  + `option.retType` set the format of the returned sum
     * default is `hex`，two bytes BigEndian hex string, `726d`
     * `array`, two unsigned char number of the returned sum，`[114, 109]`
@@ -50,8 +50,8 @@ sum.should.eql([114, 109]);
 ```
 
 
-### verify a sum `crc16.verifySum`
-Params of `verifySum` is same as `checkSum`, the first two params is to constructed a buffer, which contains the sum to be verified.
+### verify a sum by `crc16.verifySum`
+Params of `verifySum` is same as `checkSum`, the first two params are used to constructe a `Buffer` which contains the `sum` to be verified.
 ```javascript
 var stream = 'a031ffb7',
     sum = '726d';
@@ -84,7 +84,7 @@ cd crc16
 `npm install`
 
 ### C++ unit testing
-`CRC16`check and verify algorithm's implemention in c++ is standalone and in `./lib/crc16.cc`.If you will modify that, please write suitable unit testing case. You can reference [Catch](https://github.com/philsquared/Catch), and then run:
+The implemention of `CRC16` checking and verifing algorithm in c++  is standalone in `./lib/crc16.cc`. If you want to modify it, please write suitable unittest cases. You can reference [Catch](https://github.com/philsquared/Catch), and then run:
 ```bash
 make test
 ```
