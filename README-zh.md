@@ -150,7 +150,7 @@ ok ~6.01 s (6 s + 14482262 ns)
 twitter: <a href="https://twitter.com/imoncoding" alt="@imoncoding">@imoncoding</a>
 </p>
 <p align="center">
-<img width="430" height="430" src="http://cdn-qiniu.algovis.fun/imnemo/qrcode_for_wechat.jpg" alt="qrcode_for_wechat">
+<img width="430" height="430" src="http://cdn-qiniu.algovis.fun/imnemo/qrcode_for_mp_oncoding.jpg" alt="qrcode_mp_oncoding">
 </p>
 <p align="center">一个追求专业、规范、极简, 关注技术本质，笃信万物相通的公众号!</p>
 

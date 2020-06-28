@@ -148,7 +148,7 @@ You can pull a request when you complete all steps above.
 twitter: <a href="https://twitter.com/imoncoding" alt="@imoncoding">@imoncoding</a>
 </p>
 <p align="center">
-<img width="430" height="430" src="http://cdn-qiniu.algovis.fun/imnemo/qrcode_for_wechat.jpg" alt="qrcode_for_wechat">
+<img width="430" height="430" src="http://cdn-qiniu.algovis.fun/imnemo/qrcode_for_mp_oncoding.jpg" alt="qrcode_mp_oncoding">
 </p>
 <p align="center">Welcome to subscribe my wechat!</p>
 
