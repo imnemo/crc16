@@ -1,6 +1,6 @@
 {
   "name": "node-crc16",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A native node addon to calcalate and verify CRC16 values, adopted by MODBUS agreement.",
   "main": "index.js",
   "scripts": {
@@ -45,13 +45,25 @@
   "homepage": "https://github.com/imnemo/crc16#readme",
   "runkitExampleFilename": "example/runkit.js",
   "files": [
-    "lib", "src", "test", "binding.gyp", "index.js", "package.json", "package-lock.json", "preinstall.js", "README.md", "README-zh.md"
+    "lib",
+    "src",
+    "test",
+    "example",
+    "binding.gyp",
+    "index.js",
+    "index.d.ts",
+    "package.json",
+    "package-lock.json",
+    "preinstall.js",
+    "README.md",
+    "README-zh.md"
   ],
   "dependencies": {
-    "buffer-factory": "1.0.5",
+    "buffer-factory": "1.0.6",
     "node-addon-api": "3.0.0"
   },
   "devDependencies": {
+    "@types/node": "14.0.27",
     "benchmark": "2.1.4",
     "chai": "4.1.0",
     "chance": "1.0.10",
