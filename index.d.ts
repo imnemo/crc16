@@ -1,13 +1,10 @@
 type CheckSumOption = {
-  retType?: string = 'hex',
+  retType?: string = 'hex' | 'array' | 'int' | 'buffer'
+} & {
   (key?: string): any
 };
 
-type CheckSumOptionWithoutRetType = {
-  (key?: string): any
-};
-
-// export function checkSum(input: string, encoding?: string = 'hex', option?: CheckSumOption): string | array | number | Buffer;
+// export function checkSum(input: string, encoding?: string | CheckSumOption, option?: CheckSumOption): string | number | [] | Buffer;
 
 export function checkSum(input: string): string;
 export function checkSum(input: string, option: {retType: 'hex'}): string;
