@@ -1,6 +1,6 @@
 {
   "name": "node-crc16",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "A native node addon to calcalate and verify CRC16 values, adopted by MODBUS agreement.",
   "main": "index.js",
   "scripts": {
