@@ -8,6 +8,7 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "benchmark": "node benchmark/benchmark.js",
     "nanobench": "node benchmark/nanobench.js",
+    "build:ts": "rm -rf tsoutput && tsc",
     "build:node": "make build-node",
     "build:xcode-project": "make build-xcode-project",
     "test:cpp": "make test",
