@@ -13,7 +13,7 @@ var parseParam = function (input, encoding, option) {
   var buf = (function () {
     if (typeof input === 'string') {
       try {
-        input = bufferFactory(input, encoding);
+        input = bufferFactory.create(input, encoding);
       } catch (e) {
         console.trace(e);
         return null;

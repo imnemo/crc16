@@ -1,6 +1,6 @@
 {
   "name": "node-crc16",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A native node addon to calcalate and verify CRC16 values, adopted by MODBUS agreement.",
   "main": "index.js",
   "scripts": {
@@ -59,7 +59,7 @@
     "README-zh.md"
   ],
   "dependencies": {
-    "buffer-factory": "1.0.6",
+    "buffer-factory": "1.0.8",
     "node-addon-api": "3.0.0"
   },
   "devDependencies": {
