@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./tsoutput",
+    "pretty": true,
+    "rootDirs": [
+      "./tssrc"
+    ],
+    "strict": true,
+    "target": "es2017"
+  },
+  "include": [
+    "./tssrc/**/*"
+  ]
+}

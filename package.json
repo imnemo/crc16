@@ -47,11 +47,11 @@
   "files": [
     "lib",
     "src",
+    "tsoutput",
     "test",
     "example",
     "binding.gyp",
     "index.js",
-    "index.d.ts",
     "package.json",
     "package-lock.json",
     "preinstall.js",

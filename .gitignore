@@ -5,6 +5,7 @@
 **/*.dSYM
 build
 binding.xcodeproj
+tsoutput
 
 # Logs
 logs
