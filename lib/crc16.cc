@@ -71,8 +71,6 @@ void checkSum(uint8_t *pDataIn, size_t len, uint8_t *sumHigh, uint8_t *sumLow)
 {
     uint8_t tableIndex = 0;
 
-    //采用len控制for循环结束，更灵活
-    //这样可以对input的一部分做计算
     size_t i = 0;
     if ((0 != len) && (NULL != pDataIn))
     {
